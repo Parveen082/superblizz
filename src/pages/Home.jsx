@@ -3,6 +3,7 @@ import { motion, useInView } from 'framer-motion';
 import { FaPencilRuler, FaBullhorn, FaPalette, FaMobileAlt, FaAd, FaVideo } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import logo from "../asset/bgggg1.jpg"
 import 'swiper/css';
 
 const services = [
@@ -51,7 +52,7 @@ const logos = [
 
 const Home = () => {
   const servicesRef = useRef(null);
-  const inView = useInView(servicesRef, { once: true, margin: '-100px' });
+  const inView = useInView(servicesRef, { once: true, margin: '-10px' });
 
   // Add error handling for background image
   const handleImageError = (e) => {
@@ -61,13 +62,13 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative flex flex-col items-center justify-center min-h-[70vh] bg-black text-white text-center pt-24 md:pt-16 overflow-hidden">
-        <div 
+      <section className="relative flex flex-col items-center justify-center min-h-[70vh] bg-black text-white text-center pt-24 md:pt-16 overflow-hidden font-sf-pro">
+        <div
           className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat opacity-40"
-          style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+          style={{ backgroundImage: `url(${logo})` }}
           onError={handleImageError}
         />
-        <div className="absolute inset-0 bg-black opacity-60" />
+        <div className="absolute inset-0  opacity-60" />
         <motion.h1
           className="text-4xl md:text-3xl font-extrabold tracking-wide mb-4 z-10"
           initial={{ opacity: 0, y: 40 }}
@@ -103,88 +104,100 @@ const Home = () => {
       </section>
 
       {/* Logo Slider Section */}
-      <section className="bg-superdark py-8">
-        <div className="max-w-[1000px] mx-auto px-4">
-          <Swiper
-            modules={[Autoplay]}
-            spaceBetween={20}
-            slidesPerView={5}
-            loop={true}
-            autoplay={{
-              delay: 0,
-              disableOnInteraction: false,
-            }}
-            speed={3000}
-            className="logo-slider"
-            breakpoints={{
-              320: {
-                slidesPerView: 2,
-                spaceBetween: 15
-              },
-              480: {
-                slidesPerView: 3,
-                spaceBetween: 20
-              },
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 20
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 20
-              }
-            }}
-          >
-            {logos.map((logo, index) => (
-              <SwiperSlide key={index}>
-                <div className="flex items-center justify-center h-24">
-                  <div className="bg-gradient-to-br from-superred/20 to-superred/5 p-4 rounded-2xl backdrop-blur-sm border border-superred/20 hover:border-superred/40 transition-all duration-300 hover:shadow-lg hover:shadow-superred/20">
-                    <img
-                      src={logo.src}
-                      alt={logo.alt}
-                      className="max-h-12 w-auto object-contain filter hover:brightness-110 transition-all duration-300"
-                      onError={(e) => {
-                        e.target.src = 'https://via.placeholder.com/150x50?text=Logo';
-                      }}
-                    />
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
+      <section className="bg-black py-8">
+  <div className="max-w-[1000px] mx-auto px-2 bg-black py-2 rounded-full border border-white overflow-hidden">
+    <Swiper
+      modules={[Autoplay]}
+      spaceBetween={10}
+      slidesPerView={5}
+      loop={true}
+      autoplay={{
+        delay: 0,
+        disableOnInteraction: false,
+      }}
+      speed={3000}
+      className="logo-slider"
+      breakpoints={{
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 8,
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+      }}
+    >
+      {logos.map((logo, index) => (
+        <SwiperSlide key={index}>
+          <div className="flex items-center justify-center h-[50px] md:h-[60px]">
+            <div className="rounded-full bg-black p-1 md:p-0">
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] object-cover rounded-full transition-all duration-300"
+                onError={(e) => {
+                  e.target.src = 'https://via.placeholder.com/150x50?text=Logo';
+                }}
+              />
+            </div>
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  </div>
+</section>
 
       {/* Services Section */}
       <motion.section
         ref={servicesRef}
-        initial={{ y: 200, opacity: 0, rotateX: 60 }}
-        animate={inView ? { y: 0, opacity: 1, rotateX: 0 } : {}}
-        transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
+        initial={{ x: 100, opacity: 0, rotateY: 45 }} // Start from the right
+        animate={inView ? { x: 0, opacity: 1, rotateY: 0 } : {}}
+        transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
         style={{ perspective: 1000 }}
-        className="bg-superdark text-white py-16 md:py-10"
+        className="bg-superdark text-white py-16 font-sf-pro md:py-10"
       >
-        <div className="max-w-[1200px] mx-auto mb-8 flex items-baseline gap-2 text-3xl md:text-2xl font-extrabold text-left">
-          <span className="text-white">OUR</span> <span className="text-superred">SERVICES</span>
+        <div className="max-w-[1200px] mx-auto text-center mb-8">
+          <h2 className="text-4xl md:text-3xl font-extrabold">
+            <span className="text-white">OUR </span>
+            <span className="text-superred">SERVICES</span>
+          </h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
-              whileHover={{ scale: 1.04, boxShadow: '0 0 20px #ff1e1e' }}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(255, 30, 30, 0.3)' }}
+              initial={{ x: 100, opacity: 0 }} // Start from the right
+              animate={{ x: 0, opacity: 1 }}
               transition={{ delay: i * 0.1 }}
-              className="bg-[#181818] rounded-xl p-8 flex flex-col items-center text-center shadow-lg"
+              className="bg-[#181818] rounded-2xl p-6 flex flex-col items-end text-right shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              {s.icon}
-              <h3 className="text-white text-lg font-extrabold mb-1 tracking-wide uppercase">{s.title}</h3>
-              <p className="text-white text-sm mb-4">{s.desc}</p>
-              <button className="bg-superred text-white font-semibold rounded-md px-5 py-2 text-sm mt-2 transition hover:bg-white hover:text-superred border-2 border-superred">GET QUOTATION</button>
+              <div className="text-5xl mb-4">{s.icon}</div>
+             <h3 className="text-2xl font-bold mb-2 tracking-widest uppercase text-white text-right">
+  {s.title}
+</h3>
+
+              <p className="text-sm text-gray-300 mb-4 text-right">{s.desc}</p>
+                <a href="http://wa.me/918999074839"  rel="noopener noreferrer">
+              <button className="bg-superred text-white font-semibold rounded-lg px-6 py-2 text-base mt-3 transition hover:bg-white hover:text-superred border-2 border-superred">
+                GET QUOTATION
+              </button>
+                </a>
             </motion.div>
           ))}
         </div>
       </motion.section>
+
+
 
       {/* Projects Section */}
       <section className="bg-[#181818] text-white py-16 md:py-10">
@@ -236,7 +249,9 @@ const Home = () => {
         <div className="max-w-md w-full text-right md:text-left">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-2">LET'S BRING YOUR VISION TO LIFE!</h2>
           <p className="mb-4 text-base md:text-lg">Ready to discuss your design needs or have a question about our services? Reach out using the contact details below or fill out the form, and we'll get back to you promptly.</p>
-          <button className="bg-superred text-white font-semibold rounded-full px-6 py-2 mt-2 transition hover:bg-white hover:text-superred border-2 border-superred">Chat With Us</button>
+          <a href="http://wa.me/918999074839"  rel="noopener noreferrer"></a>
+          <button className="bg-superred text-white font-semibold rounded-full px-6 py-2 mt-2 transition hover:bg-white hover:text-superred border-2 border-superred" >Chat With Us</button>
+          <a />
         </div>
       </section>
     </>

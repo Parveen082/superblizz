@@ -2,7 +2,7 @@ import React from 'react';
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => (
-  <footer className="bg-black text-white pt-12 pb-4 border-t-2 border-superred mt-12">
+  <footer className="bg-black text-white pt-12 pb-4 border-t-2 border-superred ">
     <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-6">
       <div className="font-bold text-lg tracking-wider flex items-center gap-2">
         <span role="img" aria-label="bolt">⚡</span> SUPERBLIZ
