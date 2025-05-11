@@ -15,28 +15,6 @@ const services = [
   { title: 'Video Editing', desc: 'Transforming raw footage into polished and engaging videos that tell your story effectively.', icon: <FaVideo className="text-superred text-3xl mb-2" /> },
 ];
 
-const projects = [
-  {
-    title: 'FIRST AIM OVERSEAS',
-    desc: 'Superbliz collaborated with First Aim Overseas, a visa company, to establish their initial visual presence. We designed a logo that conveys trust and global reach, complemented by comprehensive branding elements that aim to make the often complex visa process feel more accessible and reliable for their clientele seeking opportunities abroad. Generate Audio Overview',
-    img: 'https://dummyimage.com/180x80/fff/007bff&text=FAO+Logo',
-    cardImg: 'https://dummyimage.com/300x180/fff/007bff&text=FAO+Card',
-    btn: 'CHAT WITH US TO KNOW MORE',
-  },
-  {
-    title: 'CLARITY CAPITAL',
-    desc: 'Superbliz partnered with Clarity Capital, an insurance company, to create their visual foundation. We designed a sophisticated logo embodying their values and developed comprehensive branding for a consistent and impactful presence, establishing a strong brand image in the insurance sector.',
-    img: 'https://dummyimage.com/40x40/ff1e1e/fff&text=CC',
-    btn: 'CHAT WITH US TO KNOW MORE',
-  },
-  {
-    title: 'GRAIN & GREEN',
-    desc: 'Superbliz developed a vibrant logo and comprehensive branding for Grain & Green, a nutrition food brand. Our design aimed to capture their focus on healthy and appealing food, establishing a fresh and memorable visual identity within the health food market.',
-    img: 'https://dummyimage.com/40x40/00ff00/fff&text=GG',
-    btn: 'CHAT WITH US TO KNOW MORE',
-  },
-];
-
 const logos = [
   { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 1' },
   { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 2' },
@@ -89,17 +67,22 @@ const Home = () => {
           <motion.button
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
+            href = "/ser"
             className="border-2 border-superred text-superred font-semibold rounded-full px-6 py-2 transition hover:bg-white hover:text-superred"
           >
             Explore Our Services
           </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-superred text-white font-semibold rounded-full px-6 py-2 border-2 border-superred transition hover:bg-white hover:text-superred"
-          >
-            Get a Free Consultation
-          </motion.button>
+        <motion.a
+  whileHover={{ scale: 1.08 }}
+  whileTap={{ scale: 0.95 }}
+  onClick={() => {
+    window.location.href = "http://wa.me/918999074839";
+  }}
+  className="bg-superred text-white font-semibold rounded-full px-6 py-2 border-2 border-superred transition hover:bg-white hover:text-superred"
+>
+  Get a Free Consultation
+</motion.a>
+
         </div>
       </section>
 
@@ -200,7 +183,7 @@ const Home = () => {
 
 
       {/* Projects Section */}
-      <section className="bg-[#181818] text-white py-16 md:py-10">
+      <section className="bg-[#181818] font-sana text-white py-16 md:py-10">
         <div className="max-w-[1200px] mx-auto mb-8 flex items-baseline gap-2 text-3xl md:text-2xl font-extrabold text-left">
           <span className="text-white">OUR</span> <span className="text-superred">PROJECTS</span>
         </div>
@@ -238,7 +221,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="flex flex-col md:flex-row items-center justify-between max-w-[1200px] mx-auto bg-transparent text-superred rounded-2xl py-12 px-8 md:py-8 md:px-16 mt-12 gap-8">
+      <section className=" font-sana flex flex-col md:flex-row items-center justify-between max-w-[1200px] mx-auto bg-transparent text-superred rounded-2xl py-12 px-8 md:py-8 md:px-16 mt-12 gap-8">
         <div className="flex-1 w-full flex justify-center mb-6 md:mb-0">
           <img
             src="https://dummyimage.com/400x250/ff1e1e/fff"

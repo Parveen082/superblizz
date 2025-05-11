@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
-
-// Import the PDF file
+import logomain from '../asset/superblizlogo.png';
 import brochure from '../asset/SUPERBLIZBROCHURE.pdf';
 
 const navLinks = [
@@ -18,10 +17,16 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full bg-black text-white fixed top-0 left-0 z-[1000] shadow-lg">
+    <header className="w-full  text-white absolute top-0 left-0 z-[1000] shadow-lg">
       <nav className="flex items-center justify-between max-w-[1200px] mx-auto px-8 py-5 md:py-4">
-        <div className="font-bold text-xl tracking-wider flex items-center gap-2 z-50">
-          <span role="img" aria-label="bolt">⚡</span> SUPERBLIZ
+
+        {/* Increased logo size from h-16 w-16 to h-20 w-20 */}
+        <div className="flex items-center gap-2 z-50">
+          <img
+            src={logomain}
+            alt="SUPERBLIZ Logo"
+            className="h-20 w-20 object-contain"  // Changed from h-16 w-16
+          />
         </div>
 
         {/* Center-aligned navigation links */}
