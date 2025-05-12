@@ -14,10 +14,10 @@ const Footer = () => (
 </div>
 
       <div className="flex gap-4 mt-2">
-        <a href="#"  rel="noopener noreferrer" aria-label="Instagram" className="hover:text-superred transition">
+        <a href="/"  rel="noopener noreferrer" aria-label="Instagram" className="hover:text-superred transition">
           <FaInstagram size={22} />
         </a>
-        <a href="#"  rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-superred transition">
+        <a href="/"  rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-superred transition">
           <FaLinkedin size={22} />
         </a>
         <a href="https://wa.me/918999074839"  rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-superred transition">
