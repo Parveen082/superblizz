@@ -1,11 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Loading = ({ onFinish }) => {
+  const [showLoading, setShowLoading] = useState(false);
+
   useEffect(() => {
-    const timer = setTimeout(onFinish, 5000);
-    return () => clearTimeout(timer);
+    // Clear the flag on hard refresh
+    window.addEventListener('beforeunload', () => {
+      localStorage.removeItem('hasShownLoading');
+    });
+
+    // Check if loading animation has been shown before
+    const hasShown = localStorage.getItem('hasShownLoading');
+    if (!hasShown) {
+      setShowLoading(true);
+      // Set a timeout to hide the animation
+      const timer = setTimeout(() => {
+        setShowLoading(false);
+        localStorage.setItem('hasShownLoading', 'true'); // Mark as shown
+        onFinish();
+      }, 5000);
+      return () => clearTimeout(timer);
+    } else {
+      // Directly call onFinish if the animation was already shown
+      onFinish();
+    }
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener('beforeunload', () => {
+        localStorage.removeItem('hasShownLoading');
+      });
+    };
   }, [onFinish]);
+
+  if (!showLoading) return null;
 
   // Inline style objects
   const styles = {
@@ -16,15 +45,15 @@ const Loading = ({ onFinish }) => {
       overflow: 'hidden',
       zIndex: 2000,
       display: 'flex',
-      alignItems: 'center',        // center vertically
-      justifyContent: 'center',    // center horizontally
+      alignItems: 'center',
+      justifyContent: 'center',
       flexDirection: 'column',
     },
     rocketContainer: {
       position: 'relative',
       width: 60,
       height: 120,
-      marginBottom: 40,            // space before text block
+      marginBottom: 40,
     },
     rocket: {
       width: '100%',
