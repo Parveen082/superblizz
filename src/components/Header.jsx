@@ -25,9 +25,10 @@ const Header = () => {
           <img
             src={logomain}
             alt="SUPERBLIZ Logo"
-            className="h-20 w-20 object-contain"  // Changed from h-16 w-16
+            className="h-28 w-28 object-contain"  // Increased from h-20 w-20
           />
         </div>
+
 
         {/* Center-aligned navigation links */}
         <div className="hidden md:flex gap-8 items-center justify-center flex-1">
