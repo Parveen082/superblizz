@@ -2,6 +2,7 @@
   "name": "superblx",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "framer-motion": "^12.10.5",
     "react": "^19.1.0",

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import logomain from '../asset/superblizlogo.png';
+import logomain from '../asset/mainlogo.png';
 import brochure from '../asset/SUPERBLIZBROCHURE.pdf';
 
 const navLinks = [
@@ -25,7 +25,7 @@ const Header = () => {
           <img
             src={logomain}
             alt="SUPERBLIZ Logo"
-            className="h-28 w-28 object-contain"  // Increased from h-20 w-20
+            className="h-12 w-15 object-contain"  // Increased from h-20 w-20
           />
         </div>
 
@@ -48,7 +48,7 @@ const Header = () => {
           whileTap={{ scale: 0.95 }}
           href={brochure}
           download
-          className="hidden md:block ml-auto bg-superred text-white px-5 py-2 rounded-full font-semibold shadow transition hover:bg-white hover:text-superred border-2 border-superred"
+          className="hidden md:block bg-superred text-white px-6 py-1 rounded-full font-semibold shadow transition hover:bg-white hover:text-superred border-2 border-superred"
         >
           Download Brochure
         </motion.a>
@@ -85,7 +85,7 @@ const Header = () => {
               whileTap={{ scale: 0.95 }}
               href={brochure}
               download
-              className="mt-4 bg-superred text-white px-6 py-2 rounded-full font-semibold shadow transition hover:bg-white hover:text-superred border-2 border-superred"
+              className="mt-4 text-center justify-center bg-superred text-white px-6 py-2 rounded-full font-semibold shadow transition hover:bg-white hover:text-superred border-2 border-superred"
             >
               Download Brochure
             </motion.a>

@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         'sf-pro': ['SF Pro Display', 'sans-serif'], // Add the SF Pro Display font
          'sana': ['Sana'], 
+         
       },
     },
   },
