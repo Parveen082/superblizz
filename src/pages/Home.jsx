@@ -172,7 +172,7 @@ const Home = () => {
           {/* Services Section */}
           <section
             ref={servicesRef}
-            className="bg-black text-white py-16 font-sf-pro md:py-10"
+            className="bg-black text-white py-16 font-sf-pro md:py-10 border-[#222]"
             style={{ perspective: 1000 }}
           >
             <div className="max-w-[1200px] mx-auto text-center mb-8">
