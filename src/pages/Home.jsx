@@ -15,29 +15,32 @@ import fcard from "../asset/sachincard.png"
 import flogo from "../asset/ffologo.png"
 import green from "../asset/green.png"
 import lastt from "../asset/lastimage.png"
+import s1 from "../asset/slider1.png"
+import s2 from "../asset/slider2.png"
+import s3 from "../asset/slider3.png"
+import s4 from "../asset/slider4.png"
+import s5 from "../asset/slider5.png"
+import s6 from "../asset/slider6.png"
 import 'swiper/css';
 
 const services = [
-  { title: 'Logo Designing', desc: 'Crafting memorable and impactful visual identities that capture the essence  of your brand', icon: <img src={loggo} alt="Logo Design" className="w-12 h-12 mb-2" /> },
-  { title: 'Brand Identity', desc: 'Developing cohesive brand identities through business card design, letterhead design, festival bundle creatives, banners, flyers, and more.', icon: <img src={mark} alt="Logo Design" className="w-12 h-12 mb-2" /> },
-  { title: 'Graphic Designing', desc: 'Designing compelling marketing materials, from brochures and posters to social media graphics.', icon: <img src={graphicc} alt="Logo Design" className="w-12 h-12 mb-2" /> },
-  { title: 'UI/UX Designing', desc: 'Creating seamless and engaging user interfaces and experiences for websites and applications.', icon: <img src={uiux} alt="Logo Design" className="w-12 h-12 mb-2" /> },
+  { title: 'Logo Designing', desc: 'We specialize in crafting memorable and impactful visual identities – the very essence that captures your brands heart and soul, leaving a lasting impression', icon: <img src={loggo} alt="Logo Design" className="w-12 h-12 mb-2" /> },
+  { title: 'Brand Identity', desc: 'Developing cohesive brand identities through business card design, letterhead design, festival bundle creatives, banners, flyers, and more as your all  needs', icon: <img src={mark} alt="Logo Design" className="w-12 h-12 mb-2" /> },
+  { title: 'Graphic Designing', desc: 'We are experts in designing compelling marketing materials  everything from tangible brochures and eye-catching posters to dynamic social media graphics.', icon: <img src={graphicc} alt="Logo Design" className="w-12 h-12 mb-2" /> },
+  { title: 'UI/UX Designing', desc: 'Creating seamless and engaging user interfaces and experiences for websites and applications. Creating crucial touchpoints that transform websites.', icon: <img src={uiux} alt="Logo Design" className="w-12 h-12 mb-2" /> },
   { title: 'CGI Advertisement', desc: 'Bringing your product or brand to life with stunning and photorealistic computer-generated imagery for impactful advertising campaigns.', icon: <img src={cgii} alt="Logo Design" className="w-12 h-12 mb-2" /> },
-  { title: 'Video Editing', desc: 'Transforming raw footage into polished and engaging videos that tell your story effectively.', icon: <img src={video} alt="Logo Design" className="w-12 h-12 mb-2" /> },
+  { title: 'Video Editing', desc: 'We master the art of transforming raw footage into polished and engaging videos – powerful visual narratives that effectively  captivate your viewers.', icon: <img src={video} alt="Logo Design" className="w-12 h-12 mb-2" /> },
 ];
 
 const logos = [
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 1' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 2' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 3' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 4' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 5' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 1' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 2' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 3' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 4' },
-  { src: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAWlBMVEUCwswIuc4NrdEZo9QjldcyiNhOuNmt3ev////u9fyH1OLY5Phryt02eN9FcNwCmNRQYeBeTuMlhd5qO+grU+WAi+w8Zeh6Kumvs/RHM+5KTPFzJ/BZNvdkJ/qcqMW7AAABD0lEQVR4AXXPBRLDMAxEUVMTOcyc+1+zK6kMv4N9s3JrvrLIOe99uHybYYQG4N9l+LN0fzCB3YfvmBKKmfuBGVFe2IIog3lY+WYZP5hRvA2rh2GRsvG0FisrY/kDxGP6J1LKaxiGQDHLR0GIKNGjglIkEvI+T2oQjlbNHXGVCd1uwhrjrMM5/jlCAckO1honZcBapGMSU/SuFmRCpVrbtsZzdcEoIqTWM/IzRPFOQz6q9YZv4VokAkzlNA0jDWLzbDptIcqHCcFGmSmWPBkitBmGZqFlhYGAQlxOeDcSTGaCk7Rt2zrmkeLSrqB9VhRBUO44QPusahQODXTuSE3wDudx7mr3pX6tvRtQ4R3vegWNXiIGxpIzCAAAAABJRU5ErkJggg==', alt: 'Partner Logo 5' },
+  { src: s1, alt: 'Partner Logo 1' },
+  { src: s2, alt: 'Partner Logo 2' },
+  { src: s3, alt: 'Partner Logo 3' },
+  { src: s4, alt: 'Partner Logo 4' },
+  { src: s5, alt: 'Partner Logo 5' },
+  { src: s6, alt: 'Partner Logo 6' },
 ];
+
 
 const Home = () => {
   const servicesRef = useRef(null);
@@ -145,23 +148,23 @@ const Home = () => {
                     spaceBetween: 20,
                   },
                 }}
-              >
-                {logos.map((logo, index) => (
-                  <SwiperSlide key={index}>
-                    <div className="flex items-center justify-center h-[150px] md:h-[150px]">
-                      <div className="rounded-full md:p-0">
-                        <img
-                          src={logo.src}
-                          alt={logo.alt}
-                          className="h-[130px] w-[130px] md:h-[130px] md:w-[130px] object-cover rounded-full transition-all duration-300"
-                          onError={(e) => {
-                            e.target.src = 'https://via.placeholder.com/150x50?text=Logo';
-                          }}
-                        />
-                      </div>
+              >{logos.map((logo, index) => (
+                <SwiperSlide key={index}>
+                  <div className="flex items-center justify-center h-[150px] md:h-[150px]">
+                    <div className="rounded-full  md:p-0">
+                      <img
+                        src={logo.src} // Directly use imported image
+                        alt={logo.alt}
+                        className="h-[130px] w-[130px] md:h-[130px] md:w-[130px] object-cover rounded-full transition-all duration-300"
+                        onError={(e) => {
+                          e.target.src = 'https://via.placeholder.com/150x50?text=Logo';
+                        }}
+                      />
                     </div>
-                  </SwiperSlide>
-                ))}
+                  </div>
+                </SwiperSlide>
+              ))}
+
               </Swiper>
             </div>
           </section>
@@ -178,7 +181,7 @@ const Home = () => {
                 <span className="text-superred">SERVICES</span>
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
+            <div className="grid border-[#464646] grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
               {services.map((s) => (
                 <div
                   key={s.title}
@@ -213,9 +216,9 @@ const Home = () => {
               </h1>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-[1200px] mx-auto px-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-[1200px]  mx-auto px-4">
               {/* Left large card */}
-              <div className="bg-[#0E0F0F] rounded-2xl p-6 flex flex-col items-center md:items-end text-center md:text-right shadow-lg border border-[#222]">
+              <div className="bg-[#0E0F0F] rounded-2xl p-6 flex flex-col items-center md:items-end text-center md:text-right shadow-lg border border-[#464646]">
                 <div className="flex flex-col md:flex-row items-center md:space-x-4 mb-4">
                   <span className="font-extrabold text-2xl md:text-3xl uppercase tracking-wide text-white">
                     FIRST AIM OVERSEAS
@@ -228,21 +231,23 @@ const Home = () => {
                   Superbliz collaborated with First Aim Overseas, a visa company, to establish their initial visual presence. We designed a logo that conveys trust and global reach, complemented by comprehensive branding elements that aim to make the often complex visa process feel more accessible and reliable.
                 </p>
 
-                <img src={fcard} alt="project visual" className="rounded-md w-full max-w-[300px] mb-4" />
+                <img src={fcard} alt="project visual" className="rounded-md w-full max-w-[400px] mb-4" />
 
                 <a href="http://wa.me/918999074839" target="_blank" rel="noopener noreferrer" className="w-full">
-                  <button className="w-full bg-superred text-white font-semibold rounded-full px-5 py-2 text-base transition hover:bg-white hover:text-superred border-2 border-superred">
-                    CHAT WITH US TO KNOW MORE
-                  </button>
+                <button className="w-1/2 bg-superred text-white font-semibold rounded-full px-3 py-1 text-sm transition hover:bg-white hover:text-superred border-2 border-superred">
+  CHAT WITH US TO KNOW MORE
+</button>
+
+
                 </a>
               </div>
 
               {/* Right column: two stacked cards */}
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-8 border-[#464646]">
                 {[
                   {
                     title: 'CLARITY CAPITAL',
-                    logo: 'https://dummyimage.com/60x60/ff1e1e/fff&text=CC',
+                    logo: s2,
                     desc: 'Superbliz partnered with Clarity Capital, an insurance company, to create their visual foundation. We designed a sophisticated logo embodying their values and developed comprehensive branding for a consistent and impactful presence.'
                   },
                   {
@@ -254,7 +259,9 @@ const Home = () => {
                   <div key={proj.title} className="bg-[#0E0F0F] rounded-2xl p-6 flex flex-col items-center md:items-end text-center md:text-right h-[400px] shadow-lg border border-[#222]">
                     <div className="flex flex-col md:flex-row items-center md:space-x-4 mb-4">
                       <span className="font-extrabold text-2xl md:text-3xl uppercase tracking-wide text-white">
-                        {proj.title}
+                        {proj.title.split(' ').map((word, index) => (
+                          <span key={index} className="block">{word}</span>
+                        ))}
                       </span>
                       <div className="hidden md:block h-[90px] border-l-2 border-red-500" />
                       <img src={proj.logo} alt={`${proj.title} Logo`} className="h-16 md:h-[90px] w-auto mt-2 md:mt-0" />
@@ -263,17 +270,18 @@ const Home = () => {
                     <p className="text-sm md:text-base mb-4">{proj.desc}</p>
 
                     <a href="http://wa.me/918999074839" target="_blank" rel="noopener noreferrer" className="w-full">
-                      <button className="w-full bg-superred text-white font-semibold rounded-full px-5 py-2 text-base transition hover:bg-white hover:text-superred border-2 border-superred">
+                      <button className="w-1/2 bg-superred text-white font-semibold rounded-full px-2 py-1 text-sm transition hover:bg-white hover:text-superred border-2 border-superred">
                         CHAT WITH US TO KNOW MORE
                       </button>
                     </a>
                   </div>
                 ))}
               </div>
+
             </div>
           </section>
 
-          <section className="font-sf-pro flex  flex-col md:flex-row items-center font-sf-pro justify-between max-w-[1200px] h-[600px] mx-auto bg-transparent text-superred rounded-2xl py-12 px-8 md:py-8 md:px-16 mt-12 gap-8">
+          <section className="font-sf-pro flex  flex-col md:flex-row items-center justify-between max-w-[1200px] h-[600px] mx-auto bg-transparent text-superred rounded-2xl py-12 px-8 md:py-8 md:px-16 mt-12 gap-8">
             <div className="flex-[7] w-full flex justify-center mb-6 md:mb-0">
               <img
                 src={lastt}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logomain from '../asset/mainlogo.png';
 
 const Loading = ({ onFinish }) => {
   const [showLoading, setShowLoading] = useState(false);
@@ -171,7 +172,9 @@ const Loading = ({ onFinish }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={textFadeIn(2.2)}
           >
-            Welcome to the <span style={styles.superred}>✨SuperBliz</span>
+            Welcome to the <span style={styles.superred}>
+  <img src={logomain} alt="SuperBliz Logo" className="inline-block w-20 h-10 ml-1" />
+</span>
           </motion.h2>
           <motion.h3
             style={styles.subtitle}
